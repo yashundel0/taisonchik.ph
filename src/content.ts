@@ -1,5 +1,8 @@
 export type Lang = 'de' | 'ru';
 
+const BASE = import.meta.env.BASE_URL;
+const asset = (path: string) => `${BASE}${path.replace(/^\//, '')}`;
+
 export const CONTACTS = {
   instagram: 'https://www.instagram.com/taisonchik_ph/',
   instagramHandle: '@taisonchik_ph',
@@ -19,27 +22,27 @@ export type PortfolioImage = {
 // Images are stored locally in /public/portfolio/.
 // To replace or add more photos, place new images in /public/portfolio/ and update this array.
 export const PORTFOLIO_IMAGES: PortfolioImage[] = [
-  { src: '/portfolio/Изображение_JPEG-49BB-AFF1-F2-0.jpeg', category: 'portraits' },
-  { src: '/portfolio/Изображение_JPEG-49BB-AFF1-F2-1.jpeg', category: 'portraits' },
-  { src: '/portfolio/Изображение_JPEG-49BB-AFF1-F2-2.jpeg', category: 'couples' },
-  { src: '/portfolio/photo_04.jpg', category: 'portraits' },
-  { src: '/portfolio/photo_05.jpg', category: 'couples' },
-  { src: '/portfolio/photo_06.jpg', category: 'lifestyle' },
-  { src: '/portfolio/photo_07.jpg', category: 'portraits' },
-  { src: '/portfolio/photo_08.jpg', category: 'lifestyle' },
-  { src: '/portfolio/photo_09.jpg', category: 'portraits' },
-  { src: '/portfolio/photo_13.jpg', category: 'portraits' },
-  { src: '/portfolio/photo_14.jpg', category: 'couples' },
-  { src: '/portfolio/photo_15.jpg', category: 'portraits' },
-  { src: '/portfolio/photo_16.jpg', category: 'portraits' },
+  { src: asset('/portfolio/Изображение_JPEG-49BB-AFF1-F2-0.jpeg'), category: 'portraits' },
+  { src: asset('/portfolio/Изображение_JPEG-49BB-AFF1-F2-1.jpeg'), category: 'portraits' },
+  { src: asset('/portfolio/Изображение_JPEG-49BB-AFF1-F2-2.jpeg'), category: 'couples' },
+  { src: asset('/portfolio/photo_04.jpg'), category: 'portraits' },
+  { src: asset('/portfolio/photo_05.jpg'), category: 'couples' },
+  { src: asset('/portfolio/photo_06.jpg'), category: 'lifestyle' },
+  { src: asset('/portfolio/photo_07.jpg'), category: 'portraits' },
+  { src: asset('/portfolio/photo_08.jpg'), category: 'lifestyle' },
+  { src: asset('/portfolio/photo_09.jpg'), category: 'portraits' },
+  { src: asset('/portfolio/photo_13.jpg'), category: 'portraits' },
+  { src: asset('/portfolio/photo_14.jpg'), category: 'couples' },
+  { src: asset('/portfolio/photo_15.jpg'), category: 'portraits' },
+  { src: asset('/portfolio/photo_16.jpg'), category: 'portraits' },
 ];
 
 // Hero image
-export const HERO_IMAGE_MAIN = '/portfolio/Изображение_PNG_14.png';
-export const HERO_IMAGE_SMALL = '/portfolio/photo_07.jpg';
+export const HERO_IMAGE_MAIN = asset('/portfolio/Изображение_PNG_14.png');
+export const HERO_IMAGE_SMALL = asset('/portfolio/photo_07.jpg');
 
 // About section image
-export const ABOUT_IMAGE = '/portfolio/photo_13.jpg';
+export const ABOUT_IMAGE = asset('/portfolio/photo_13.jpg');
 
 export type Content = {
   nav: {
